@@ -38,7 +38,7 @@ module.exports = function spare () {
             output = defaultValue
         }
     }
-    if (output) {
+    if (typeof output !== 'undefined') {
         return output
     }
     return typeof data === 'undefined'? defaultValue: data
