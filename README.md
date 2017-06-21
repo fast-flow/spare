@@ -6,7 +6,6 @@ set default value syntactic sugar
 
 `spare(data, attr?, defaultValue)`
 
-
 ## install
 
 ```shell
