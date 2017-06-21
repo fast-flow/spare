@@ -4,7 +4,7 @@
 
 `typeof value === 'undefined'? 'defaultValue': value` syntactic sugar
 
-`spare(obj, defaultValue)`
+`spare(value, defaultValue)`
 
 
 ## install
