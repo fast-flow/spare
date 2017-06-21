@@ -2,56 +2,49 @@
 
 > spare wheel
 
-`typeof value === 'undefined'? 'defaultValue': value` syntactic sugar
+set default value syntactic sugar
 
-`spare(obj, defaultValue)`
+`spare(data, attr?, defaultValue)`
 
 
 ## install
 
 ```shell
 npm install sparejs
-// or
-<script src="https://pkgzip.com/?sparejs" ></script>
-<script>
-var spare = pkgzip.sparejs
-</script>
+```
+
+```html
+<!-- Script tag -->
+<script src="https://pkgzip.com/?sparejs" ></script> <script>var spare = window.pkgzip.sparejs</script>
 ```
 
 ## Example
 
 ```js
-var spare = require('sparejs')
-spare(self, 'state.form.user', '')
-// or
-spare(self.state.form.user, '')
-// equal
-return typeof self.state.form.user === 'undefined'? self.state.form.user: ''
+spare(undefined, 'some')
+// "some"
+spare(null, 'some')
+// "some"
+
+spare('nimo', 'some')
+// "nimo"
+
+var list
+spare(list, ['1'])
+// ['1']
 ```
 
 ```js
-spare(self.state.form.user, 'some')
-// equal
-return typeof self.state.form.user === 'undefined'? self.state.form.user: 'some'
-```
+var self = {
+    state: {
+        form: {
+            nickname: 'Nico'
+        }
+    }
+}
+spare(self.state.form, 'user.name', 'defaultValue')
+// "defaultValue"
 
-```js
-spare(self.state.form.user, [])
-// equal
-return typeof self.state.form.user === 'undefined'? self.state.form.user: []
-```
-
-```js
-spare(self.state.form, 'user.name', '')
-// equal
-var data = self.state.form
-data['user'] = data['user'] || {}
-return typeof data['user']['name'] === 'undefined'? data['user']['name']: ''
-```
-
-```js
-var arr = []
-spare(arr, 2, '')
-// equal
-typeof typeof attr[2] === 'undefined'?'': attr[2]
+spare(self.state.form, 'nickname', 'defaultValue')
+// "Nico"
 ```

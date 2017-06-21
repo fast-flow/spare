@@ -1,3 +1,21 @@
+function hasValue(value, yes, no) {
+    if (typeof value === 'undefined' || value === null) {
+        if (typeof no === 'function') {
+            no()
+        }
+        else {
+            return typeof no === 'undefined'? false: no
+        }
+    }
+    else {
+        if (typeof yes === 'function') {
+            yes()
+        }
+        else {
+            return typeof yes === 'undefined'? true: yes
+        }
+    }
+}
 module.exports = function spare () {
     var throwError = function () {
         throw new Error('node_modules/spare/index.js: You should use `spare(data, defaultValue)` or `spare(data, attr, defaultValue)`\r\n The use of the error: spare(' + Array.from(arguments).join(', ') + ')')
@@ -29,7 +47,7 @@ module.exports = function spare () {
     if (attr) {
         attrArray = attr.split('.')
         var findUndefinedObj = attrArray.some(function (key, index) {
-            if (typeof data[key] === 'undefined') {
+            if (!hasValue(data[key])) {
                 return true
             }
             data = typeof data[key] === 'undefined'? {}: data[key]
@@ -38,8 +56,8 @@ module.exports = function spare () {
             output = defaultValue
         }
     }
-    if (typeof output !== 'undefined') {
+    if (hasValue(output)) {
         return output
     }
-    return typeof data === 'undefined'? defaultValue: data
+    return hasValue(data, data, defaultValue)
 }

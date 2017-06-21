@@ -14,6 +14,14 @@ describe('basic.test.js', function() {
             }
         }
         assert.equal(
+            spare(null, 'a'),
+            'a'
+        )
+        assert.equal(
+            spare(undefined, 'a'),
+            'a'
+        )
+        assert.equal(
             spare(data.b, ''),
             ''
         )
