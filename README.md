@@ -6,6 +6,20 @@
 
 `spare(obj, defaultValue)`
 
+
+## install
+
+```shell
+npm install sparejs
+// or
+<script src="https://pkgzip.com/?sparejs" ></script>
+<script>
+var spare = pkgzip.sparejs
+</script>
+```
+
+## Example
+
 ```js
 var spare = require('sparejs')
 spare(self, 'state.form.user', '')
