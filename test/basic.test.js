@@ -47,5 +47,9 @@ describe('basic.test.js', function() {
             spare(data, 'user.child.some', 'abc'),
             'abc'
         )
+        assert.equal(
+            spare(data, 'user.some', 'defaultValue'),
+            'defaultValue'
+        )
     })
 })
