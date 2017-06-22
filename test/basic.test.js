@@ -15,7 +15,7 @@ describe('basic.test.js', function() {
         }
         assert.equal(
             spare(null, 'a'),
-            'a'
+            null
         )
         assert.equal(
             spare(undefined, 'a'),

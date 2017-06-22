@@ -1,5 +1,5 @@
 function hasValue(value, yes, no) {
-    if (typeof value === 'undefined' || value === null) {
+    if (typeof value === 'undefined') {
         if (typeof no === 'function') {
             no()
         }

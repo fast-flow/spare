@@ -20,9 +20,11 @@ npm install sparejs
 ## Example
 
 ```js
+spare(user, 'nimo')
+// equal
+typeof user === 'undefined'? 'nimo': user
+
 spare(undefined, 'some')
-// "some"
-spare(null, 'some')
 // "some"
 
 spare('nimo', 'some')
