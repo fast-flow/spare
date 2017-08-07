@@ -25,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/fast-flow/spare/issues"
   },
-  "homepage": "https://github.com/fast-flow/spare#readme"
+  "homepage": "https://github.com/fast-flow/spare#readme",
+  "dependencies": {
+    "extend": "^3.0.1"
+  }
 }

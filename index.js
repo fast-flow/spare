@@ -16,7 +16,7 @@ function hasValue(value, yes, no) {
         }
     }
 }
-const spare = function spare () {
+var spare = function spare () {
     var throwError = function () {
         throw new Error('node_modules/spare/index.js: You should use `spare(data, defaultValue)` or `spare(data, attr, defaultValue)`\r\n The use of the error: spare(' + Array.from(arguments).join(', ') + ')')
     }
