@@ -61,5 +61,5 @@ var spare = function spare () {
     }
     return hasValue(data, data, defaultValue)
 }
-spare.set = require('./set')
+spare.settings = require('./settings')
 module.exports = spare

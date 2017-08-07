@@ -1,6 +1,6 @@
 var spare = require('../index')
 var assert = require('assert')
-describe('set.test.js', function() {
+describe('settings.test.js', function() {
     var defaultValue = {
         name: 'nimo',
         age: 24,
@@ -30,7 +30,7 @@ describe('set.test.js', function() {
     it('should only change name', function() {
         assert.equal(
             JSON.stringify(
-                spare.set(
+                spare.settings(
                     defaultValue
                     ,
                     {
@@ -56,7 +56,7 @@ describe('set.test.js', function() {
     it('should only xxx age', function() {
         assert.equal(
             JSON.stringify(
-                spare.set(
+                spare.settings(
                     defaultValue
                     ,
                     {
@@ -86,7 +86,7 @@ describe('set.test.js', function() {
     it('extend array', function () {
         assert.equal(
             JSON.stringify(
-                spare.set(
+                spare.settings(
                     [1],
                     [2,3]
                 )
@@ -95,7 +95,7 @@ describe('set.test.js', function() {
         )
         assert.equal(
             JSON.stringify(
-                spare.set(
+                spare.settings(
                     [1],
                     []
                 )
@@ -104,7 +104,7 @@ describe('set.test.js', function() {
         )
         assert.equal(
             JSON.stringify(
-                spare.set(
+                spare.settings(
                     [1, [2]],
                     [undefined,[3]]
                 )
@@ -113,7 +113,7 @@ describe('set.test.js', function() {
         )
         assert.equal(
             JSON.stringify(
-                spare.set(
+                spare.settings(
                     [1, [2,10]],
                     [undefined,[3,4,5]]
                 )

@@ -1,10 +1,16 @@
 # spare
 
-> spare wheel & settings `extend(true, extend(true, {}, defaultSettings), userSettings)`
+> spare wheel
 
-set default value syntactic sugar
+---
 
-`spare(data, attr?, defaultValue)`
+set default value syntactic sugar & set defaultSettings
+
+```js
+spare(data, attr?, defaultValue)
+spare.settings(defaultSettings, userSettings)
+// spare.settings equal: extend(true, extend(true, {}, defaultSettings), userSettings)
+```
 
 ## install
 
@@ -69,7 +75,7 @@ var defaultValue = {
 ```
 
 ```js
-spare.set(
+spare.settings(
     defaultValue
     ,
     {
@@ -91,7 +97,7 @@ spare.set(
 ```
 
 ```js
-spare.set(
+spare.settings(
     defaultValue
     ,
     {
@@ -119,7 +125,7 @@ spare.set(
 ### Array
 
 ```js
-spare.set(
+spare.settings(
     [1],
     [2,3]
 )
@@ -127,7 +133,7 @@ spare.set(
 ```
 
 ```js
-spare.set(
+spare.settings(
     [1],
     []
 )
@@ -135,7 +141,7 @@ spare.set(
 ```
 
 ```js
-spare.set(
+spare.settings(
     [1, [2]],
     [undefined,[3]]
 )
@@ -143,7 +149,7 @@ spare.set(
 ```
 
 ```js
-spare.set(
+spare.settings(
     [1, [2,10]],
     [undefined,[3,4,5]]
 )

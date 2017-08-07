@@ -1,5 +1,5 @@
 var extend = require("extend")
-module.exports = function set (defaultSettings, userSettings) {
+module.exports = function settings (defaultSettings, userSettings) {
     var empty
     if (Array.isArray(defaultSettings)) {
         empty = []
