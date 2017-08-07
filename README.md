@@ -1,6 +1,6 @@
 # spare
 
-> spare wheel
+> spare wheel & settings `extend(true, extend(true, {}, defaultSettings), userSettings)`
 
 set default value syntactic sugar
 
