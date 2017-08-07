@@ -53,6 +53,7 @@ spare(self.state.form, 'nickname', 'defaultValue')
 
 ## set
 
+### Object
 
 ```js
 var defaultValue = {
@@ -113,4 +114,38 @@ spare.set(
     }
 }
 */
+```
+
+### Array
+
+```js
+spare.set(
+    [1],
+    [2,3]
+)
+// [2,3]
+```
+
+```js
+spare.set(
+    [1],
+    []
+)
+// [1]
+```
+
+```js
+spare.set(
+    [1, [2]],
+    [undefined,[3]]
+)
+// [1,[3]]
+```
+
+```js
+spare.set(
+    [1, [2,10]],
+    [undefined,[3,4,5]]
+)
+// [1,[3,4,5]]
 ```

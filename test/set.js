@@ -106,7 +106,7 @@ describe('set.test.js', function() {
             JSON.stringify(
                 spare.set(
                     [1, [2]],
-                    [,[3]]
+                    [undefined,[3]]
                 )
             ),
             '[1,[3]]'
@@ -115,7 +115,7 @@ describe('set.test.js', function() {
             JSON.stringify(
                 spare.set(
                     [1, [2,10]],
-                    [,[3,4,5]]
+                    [undefined,[3,4,5]]
                 )
             ),
             '[1,[3,4,5]]'
