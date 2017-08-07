@@ -49,3 +49,68 @@ spare(self.state.form, 'user.name', 'defaultValue')
 spare(self.state.form, 'nickname', 'defaultValue')
 // "Nico"
 ```
+
+
+## set
+
+
+```js
+var defaultValue = {
+    name: 'nimo',
+    age: 24,
+    child: {
+        'xxx': {
+            age: 0,
+            name: 'xxx'
+        }
+    }
+}
+```
+
+```js
+spare.set(
+    defaultValue
+    ,
+    {
+        name: 'tim'
+    }
+)
+/* - result
+{
+    name: 'tim',
+    age: 24,
+    child: {
+        'xxx': {
+            age: 0,
+            name: 'xxx'
+        }
+    }
+}
+*/
+```
+
+```js
+spare.set(
+    defaultValue
+    ,
+    {
+        child: {
+            xxx: {
+                age: 1
+            }
+        }
+    }
+)
+/* - result
+{
+    name: 'nimo',
+    age: 24,
+    child: {
+        'xxx': {
+            age: 1,
+            name: 'xxx'
+        }
+    }
+}
+*/
+```
